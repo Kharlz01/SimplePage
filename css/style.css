@@ -1,0 +1,275 @@
+/* Aplica configuraciones al root de la pagina */
+*, 
+*::after,
+*::before{
+    /* Reestablece las margenes y relleno de las cajas */
+    padding: 0;
+    margin: 0;
+    /* Deja los tamaños de caja a forma nativa */
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+:root{
+    /* Definicion de colores */
+    --font-color: #fff;
+    --header-link-color: #fff;
+    --main-bg-color: #373d44;
+    --section-bg-color: #5e6369;
+    --text-section: #aeaeae;
+    --button-color: deepskyblue;
+    --button-hover: #0098cc;
+    --button-text: #cccccc;
+    --bg-card: #282828;
+
+    /* Definicion de tamaños */
+    --body-fs: 1.6rem;
+    --header-p: 4rem;
+    --header-h: 10rem;
+    --header-a: 1.6rem;
+    --html-fs: 62.5%;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    /* Reestablece el tamaño de fuente regular de 16px a 10px */
+    font-size: var(--html-fs);
+}
+
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: var(--body-fs);
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-color{
+    color: var(--button-color);
+}
+
+
+/* Ajustes del header */
+
+header {
+    background-color: var(--main-bg-color);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0px 0px 40px 40px;
+}
+  
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+  
+nav li {
+    margin-right: 20px;
+}
+  
+nav a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+  
+nav a:hover {
+    color: var(--section-bg-color);
+}
+  
+.logo {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: var(--button-color);
+}
+
+/* Ajustes al main */
+
+main{
+    margin: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Inicio */
+
+.title{
+    color: black;
+}
+
+.profile{
+    width: 50rem;
+    border-radius: 50%;
+    border: var(--button-hover) solid 3px;
+    margin: 30px;
+}
+
+.main-text{
+    margin-bottom: 20px;
+}
+
+.button-color{
+    background-color: var(--button-color);
+    padding: 12px;
+    color: var(--font-color);
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.button-color img{
+    height: 18px;
+    padding-left: 1rem;
+}
+
+.button-color:hover{
+    background-color: var(--button-hover);
+    color: var(--button-text);
+}
+
+/* Acerca de mi */
+
+.about-me{
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    align-items: center;
+    text-align: center;
+    margin: auto 0;
+}
+
+.about-me h1{
+    font-size: 2em;
+}
+
+.about-me p{
+    padding: 4rem 0px;
+    font-size: 2.8rem; 
+    line-height: 1.5;
+    width: 90rem;
+    margin: 0 auto;
+}
+
+/* Portafolio */
+
+.subcard{
+    align-content: center;
+    text-align: center;
+    color: var(--bg-card);
+}
+
+.subcard p{
+    color:	var(--text-section);
+    width: 40rem;
+    margin: 2rem auto;
+}
+
+.subcard h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.button-link{
+    background-color: var(--bg-card);
+    padding: 1rem;
+    color: var(--font-color);
+    border-radius: 8px;
+    border: #fff solid 2px;
+    margin: 1rem;
+    display: inline-block;
+}
+
+.button-link:hover{
+    color: var(--button-text);
+    border-color: var(--button-text);
+}
+
+.portfolio-card{
+    background-color: var(--bg-card);
+    margin: 6rem 5rem 2rem;
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: var(--font-color);
+    border: #000 solid 2px;
+    display: inline-block;
+}
+
+.portfolio-card:hover{
+    background-color: var(--hover-color);
+    box-shadow: 1rem 1rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-card img {
+    height: 30rem;
+    width: 40rem;
+    border: #000 solid 2px;
+}
+
+/* Contactame */
+
+.contact{
+    padding: 0 4rem;
+}
+
+.contact-card {
+    background-color: var(--bg-card);
+    margin: 7rem 5rem;
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color: var(--font-color);
+    border: #000 solid 2px;
+}
+
+.contact-card h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 200;
+}
+
+.contact-card p {
+    font-size: 1.8rem;
+    margin-top: 5rem;
+    line-height: 1.6;
+}
+
+.contact-card p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-card img{
+    height: 2.5rem;
+    margin-right: 1.2rem;
+}
+
+.icon-social{
+    display: block;
+    margin: 0 auto;
+}
+
+.icon-social img{
+    margin: 15px 5px 0 5px;
+    height: 3rem;
+}
+
+
+/* Ajustes al footer de la pagina */
+
+footer{
+    background-color: var(--main-bg-color);
+    padding: 25px;
+    border-radius: 40px 40px 0px 0px;
+    text-align: center;
+    color: var(--font-color);
+}
